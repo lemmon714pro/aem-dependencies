@@ -2765,7 +2765,7 @@
                 <artifactId>uber-jar</artifactId>
                 <version>6.1.0-SP1</version>
                 <scope>provided</scope>
-                <classifier>cleaned-apis</classifier>
+                <classifier>obfuscated-apis</classifier>
             </dependency>
 
 
