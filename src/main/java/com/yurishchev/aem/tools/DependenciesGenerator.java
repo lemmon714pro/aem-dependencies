@@ -106,24 +106,25 @@ class Dependency implements Comparable<Dependency> {
     private final Node version;
     private final String bundlePath;
 
-    public Dependency(Node _group, Node _artifact, Node _version, String _bundlePath) {
+    Dependency(Node _group, Node _artifact, Node _version, String _bundlePath) {
         group = _group;
         artifact = _artifact;
         version = _version;
         bundlePath = _bundlePath;
     }
 
-    public Node getGroup() {
+    private Node getGroup() {
         return group;
     }
 
-    public Node getArtifact() {
+    private Node getArtifact() {
         return artifact;
     }
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("<dependency>\n");
+        StringBuilder sb = new StringBuilder(bundlePath);
+        sb.append("\n<dependency>\n");
         sb.append("    <groupId>").append(group.getTextContent()).append("</groupId>\n");
         sb.append("    <artifactId>").append(artifact.getTextContent()).append("</artifactId>");
         if (artifact.getTextContent().contains("${")) {
