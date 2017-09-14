@@ -347,6 +347,12 @@
                 <version>1.5.0-b01</version>
                 <scope>provided</scope>
             </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>2.3</version>
+                <scope>provided</scope>
+            </dependency>
 
 
             <!-- JCR and Apache JackRabbit -->
